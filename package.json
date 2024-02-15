@@ -2,9 +2,9 @@
   "name": "tiyoky bot fr",
   "version": "1.0.0",
   "description": "Un bot Discord simple avec Discord.js",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "index.js"
   },
   "dependencies": {
     "discord.js": "^13.1.0"
