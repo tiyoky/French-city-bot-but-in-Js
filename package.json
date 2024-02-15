@@ -1,15 +1,17 @@
 {
-  "name": "tiyoky bot fr",
+  "name": "nodejs",
   "version": "1.0.0",
-  "description": "Un bot Discord simple avec Discord.js",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.1.0"
-  },
-  "engines": {
-    "node": ">=16.6.0"
+    "@types/node": "^18.0.6",
+    "discord.js": "^14.14.1",
+    "node-fetch": "^3.2.6"
   }
 }
