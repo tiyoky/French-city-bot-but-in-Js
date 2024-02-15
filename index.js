@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+const { Client, GatewayIntentBits } = require('discord.js');
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+
+// Vos événements et commandes ici
+
 // Préfixe du bot
 const prefix = '+';
 
