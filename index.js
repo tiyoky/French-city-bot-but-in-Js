@@ -4,8 +4,6 @@ const client = new Discord.Client();
 const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
-// Vos événements et commandes ici
-
 // Préfixe du bot
 const prefix = '+';
 
@@ -46,7 +44,6 @@ client.on('message', (message) => {
 });
 
 // Remplacez 'YOUR_DISCORD_BOT_TOKEN' par le véritable jeton de votre bot
-
 async function login() {
   try {
     await client.login(process.env.TOKEN);
