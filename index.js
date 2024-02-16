@@ -1,10 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-
-intents = discord.Intents.default()
-intents.typing = true
-intents.presences = true
-intents.members = true
+const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.GUILD_MESSAGE_CONTENT] });
 
 // Préfixe du bot
 const prefix = '+';
@@ -13,7 +8,7 @@ client.on('ready', () => {
   console.log(`Connecté en tant que ${client.user.tag}`);
 });
 
-client.on('message', (message) => {
+client.on('messageCreate', (message) => {  // Utilisez 'messageCreate' au lieu de 'message' pour la version 13 de Discord.js
   // Vérifie si le message commence par le préfixe et n'est pas envoyé par un autre bot
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -55,3 +50,6 @@ async function login() {
     process.exit(1);
   }
 }
+
+// Exécutez la fonction login pour démarrer le bot
+login();
