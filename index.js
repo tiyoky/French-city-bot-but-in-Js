@@ -1,10 +1,6 @@
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_CONTENT] });
 
-client.on('messageCreate', (message) => {
-  // ...
-});
-
 // Préfixe du bot
 const prefix = '+';
 
@@ -54,6 +50,3 @@ async function login() {
     process.exit(1);
   }
 }
-
-// Exécutez la fonction login pour démarrer le bot
-login();
